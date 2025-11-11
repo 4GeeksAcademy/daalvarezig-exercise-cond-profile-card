@@ -35,13 +35,19 @@ function render(variables = {}) {
           <img src="${variables.avatarURL}" class="photo" />
           <h1>${variables.name || "David"} ${variables.lastName ||
     "Álvarez"}</h1> 
-          <h2>${variables.role || "Full Stack"}</h2>
-          <h3>Miami, USA</h3>
+          <h2>${variables.role ? variables.role : "Full Stack Developer"}</h2>
+          <h3>${variables.city || "Madrid"}, ${
+    variables.country ? variables.country : "España"
+  }</h3>
           <ul class="position-right">
-            <li><a href="https://twitter.com/4geeksacademy"><i class="fab fa-twitter"></i></a></li>
-            <li><a href="https://github.com/4geeksacademy"><i class="fab fa-github"></i></a></li>
-            <li><a href="https://linkedin.com/school/4geeksacademy"><i class="fab fa-linkedin"></i></a></li>
-            <li><a href="https://instagram.com/4geeksacademy"><i class="fab fa-instagram"></i></a></li>
+            <li><a href="https://twitter.com/$4geeksacademy"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="https://github.com/${variables.github ||
+              "daalvarezig"}"><i class="fab fa-github"></i></a></li>
+            <li><a href="https://linkedin.com/in/${variables.linkedin ||
+              "daalvarezig"}"><i class="fab fa-linkedin"></i></a></li>
+            <li><a href="https://instagram.com/${
+              variables.instagram ? variables.instagram : "topydai"
+            }"><i class="fab fa-instagram"></i></a></li>
           </ul>
         </div>
     `;
