@@ -39,7 +39,7 @@ function render(variables = {}) {
           <h3>${variables.city || "Madrid"}, ${
     variables.country ? variables.country : "España"
   }</h3>
-          <ul class="position-right">
+          <ul class="${variables.socialMediaPosition || "position-right"}">
             <li><a href="https://twitter.com/$4geeksacademy"><i class="fab fa-twitter"></i></a></li>
             <li><a href="https://github.com/${variables.github ||
               "daalvarezig"}"><i class="fab fa-github"></i></a></li>
