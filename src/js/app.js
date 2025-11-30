@@ -32,7 +32,7 @@ function render(variables = {}) {
   // reset the website body with the new html output
   document.querySelector("#widget_content").innerHTML = `<div class="widget">
             ${cover}
-          <img src="${variables.avatarURL}" class="photo" />
+          <img src= "https://randomuser.me/api/portraits/women/42.jpg" class="photo" />
           <h1>${variables.name || "David"} ${variables.lastName ||
     "Álvarez"}</h1> 
           <h2>${variables.role ? variables.role : "Full Stack Developer"}</h2>
@@ -40,14 +40,15 @@ function render(variables = {}) {
     variables.country ? variables.country : "España"
   }</h3>
           <ul class="${variables.socialMediaPosition || "position-right"}">
-            <li><a href="https://twitter.com/$4geeksacademy"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="https://twitter.com/${variables.twitter ||
+              "@topydai"}" target="_blank"><i class="fab fa-twitter"></i></a></li>
             <li><a href="https://github.com/${variables.github ||
-              "daalvarezig"}"><i class="fab fa-github"></i></a></li>
+              "daalvarezig"}" target="_blank"><i class="fab fa-github"></i></a></li>
             <li><a href="https://linkedin.com/in/${variables.linkedin ||
-              "daalvarezig"}"><i class="fab fa-linkedin"></i></a></li>
+              "daalvarezig"}" target="_blank"><i class="fab fa-linkedin"></i></a></li>
             <li><a href="https://instagram.com/${
               variables.instagram ? variables.instagram : "topydai"
-            }"><i class="fab fa-instagram"></i></a></li>
+            }" target="_blank"><i class="fab fa-instagram"></i></a></li>
           </ul>
         </div>
     `;
